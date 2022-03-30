@@ -489,7 +489,7 @@ class apibridge {
 
         if ($api->get_http_code() != 200) {
             $result->error = true;
-
+            throw new \moodle_exception('error_' . $resource, 'block_opencast');
             return $result;
         }
 
@@ -1616,7 +1616,7 @@ class apibridge {
 
         if ($video->error === 0) {
             // Don't start workflow for scheduled videos.
-            if ($video->video->processing_state !== "PLANNED" && false) {
+            if ($video->video->processing_state !== "PLANNED") {
                 $workflow = get_config('block_opencast', 'workflow_roles_' . $this->ocinstanceid);
 
                 if (!$workflow) {
@@ -1627,7 +1627,7 @@ class apibridge {
             return true;
         }
 
-        return true;
+        return false;
     }
 
     /**
