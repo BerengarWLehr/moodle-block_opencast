@@ -1,5 +1,5 @@
 {
-  "resource": "/api/events/bbbb-bbbb-bbbb-bbbb?withpublication=false&withacl=false",
+  "resource": "/api/events/bbbb-bbbb-bbbb-bbbb?withpublications=false&withacl=false",
   "response": {
     "identifier": "bbbb-bbbb-bbbb-bbbb",
     "creator": "",

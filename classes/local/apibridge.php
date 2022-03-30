@@ -489,7 +489,6 @@ class apibridge {
 
         if ($api->get_http_code() != 200) {
             $result->error = true;
-            throw new \moodle_exception('error_' . $resource, 'block_opencast');
             return $result;
         }
 
