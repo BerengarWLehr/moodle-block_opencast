@@ -85,7 +85,8 @@ class behat_block_opencast extends behat_base {
         }
 
         // Add post request.
-        $files = ['api_series_createseries.json', 'api_workflows_updatemetadata.json', 'api_workflows_startworkflow.json'];
+        $files = ['api_series_createseries.json', 'api_workflows_updatemetadata.json', 'api_workflows_startworkflow.json',
+            'api_workflows_updatemetadata_import.json'];
         $apitestable = new api_testable();
         foreach ($files as $file) {
             $apicall = file_get_contents(__DIR__ . "/../fixtures/api_calls/post/" . $file);
