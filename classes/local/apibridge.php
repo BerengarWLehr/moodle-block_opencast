@@ -1622,12 +1622,10 @@ class apibridge {
                 if (!$workflow) {
                     return true;
                 }
-                throw new \moodle_exception('workflow_start', 'block_opencast');
                 return $this->start_workflow($eventid, $workflow);
             }
             return true;
         }
-        throw new \moodle_exception('error_updating_metadata', 'block_opencast');
         return false;
     }
 
