@@ -1654,6 +1654,7 @@ class apibridge {
         $result = $api->oc_post($resource, $params);
 
         if ($api->get_http_code() != 201) {
+            throw new \moodle_exception('error_workflow_start_code', 'block_opencast');
             return false;
         }
 
