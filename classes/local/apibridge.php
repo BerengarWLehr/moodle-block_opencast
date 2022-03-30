@@ -1616,8 +1616,7 @@ class apibridge {
 
         if ($video->error === 0) {
             // Don't start workflow for scheduled videos.
-            if ($video->video->processing_state !== "PLANNED") {
-                throw new \moodle_exception('video is not planned ' . $video->video->processing_state, 'block_opencast');
+            if ($video->video->processing_state !== "PLANNED" && false) {
                 $workflow = get_config('block_opencast', 'workflow_roles_' . $this->ocinstanceid);
 
                 if (!$workflow) {
@@ -1625,7 +1624,6 @@ class apibridge {
                 }
                 return $this->start_workflow($eventid, $workflow);
             }
-            throw new \moodle_exception('video is planned', 'block_opencast');
             return true;
         }
 
