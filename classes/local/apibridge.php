@@ -1627,7 +1627,7 @@ class apibridge {
             return true;
         }
 
-        return false;
+        return true;
     }
 
     /**
