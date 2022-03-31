@@ -489,6 +489,7 @@ class apibridge {
 
         if ($api->get_http_code() != 200) {
             $result->error = true;
+
             return $result;
         }
 
@@ -1625,7 +1626,6 @@ class apibridge {
             }
             return true;
         }
-
         return false;
     }
 
