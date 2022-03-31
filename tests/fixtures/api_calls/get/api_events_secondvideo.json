@@ -12,7 +12,7 @@
     "language": "",
     "source": "",
     "title": "My video",
-    "processing_state": "PLANNED",
+    "processing_state": "SUCCEEDED",
     "duration": 0,
     "license": "",
     "archive_version": 4,
@@ -26,6 +26,6 @@
       "api",
       "annotation"
     ],
-    "status": "EVENTS.EVENTS.STATUS.SCHEDULED"
+    "status": "EVENTS.EVENTS.STATUS.PROCESSED"
   }
 }
