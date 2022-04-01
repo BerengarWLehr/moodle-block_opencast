@@ -1151,6 +1151,8 @@ class apibridge {
                 // If the process fails due to invalid metadata field, more specific error message will be thrown.
                 throw new \moodle_exception('invalidmetadatafield', 'block_opencast', null, $result);
             }
+            debugging("Post request to /api/events/ returned status code " . $api->get_http_code(),);
+            debugging("Post request to /api/events/ returned response " . var_export($result, true));
             throw new \moodle_exception('serverconnectionerror', 'tool_opencast');
         }
 
